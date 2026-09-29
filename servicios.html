@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios técnicos | TechNova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================== ENCABEZADO Y MENÚ ====================== -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+      <a href="index.html" class="logo">Tech<span>Nova</span></a>
+
+      <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="menu-navegacion" id="menu-navegacion">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html" class="activo">Servicios técnicos</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li>
+          <a href="carrito.html" class="enlace-carrito">
+            Carrito <span id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Servicios técnicos</h2>
+          <p>Mantenimiento, diagnóstico y reparación para que tu equipo siga funcionando bien.</p>
+        </div>
+
+        <div class="rejilla-servicios">
+
+          <article class="tarjeta-servicio">
+            <h3>Mantenimiento preventivo</h3>
+            <p class="descripcion">Revisión general del equipo para prevenir fallas antes de que ocurran.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>$79.900</strong>Precio aprox.</div>
+              <div><strong>1 hora</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Mantenimiento preventivo')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Limpieza de computador</h3>
+            <p class="descripcion">Limpieza interna y externa para mejorar la ventilación y el rendimiento del equipo.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>$49.900</strong>Precio aprox.</div>
+              <div><strong>45 min</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Limpieza de computador')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Diagnóstico de equipos</h3>
+            <p class="descripcion">Identificamos la causa exacta de una falla antes de proponer una reparación.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>$39.900</strong>Precio aprox.</div>
+              <div><strong>30 min</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Diagnóstico de equipos')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Reparación</h3>
+            <p class="descripcion">Solución de fallas de hardware o software detectadas en el diagnóstico.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>Desde $59.900</strong>Precio aprox.</div>
+              <div><strong>Variable</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Reparación')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Formateo e instalación de sistema operativo</h3>
+            <p class="descripcion">Instalación limpia del sistema operativo, con copia de tus archivos importantes.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>$89.900</strong>Precio aprox.</div>
+              <div><strong>1h 30m</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Formateo e instalación de sistema operativo')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Instalación de programas</h3>
+            <p class="descripcion">Instalamos y configuramos los programas que necesitas para trabajar.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>$29.900</strong>Precio aprox.</div>
+              <div><strong>30 min</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Instalación de programas')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Cambio de componentes</h3>
+            <p class="descripcion">Cambio de piezas como RAM, disco, fuente o tarjeta gráfica (pieza no incluida).</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>Desde $39.900</strong>Precio aprox.</div>
+              <div><strong>30-60 min</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Cambio de componentes')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Actualización de hardware</h3>
+            <p class="descripcion">Te recomendamos y realizamos mejoras de hardware según tu presupuesto.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>Desde $59.900</strong>Precio aprox.</div>
+              <div><strong>1 hora</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Actualización de hardware')">Solicitar servicio</button>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <h3>Asesoría tecnológica para empresas</h3>
+            <p class="descripcion">Te ayudamos a decidir qué equipos y componentes comprar según tu presupuesto.</p>
+            <div class="tarjeta-servicio__datos">
+              <div><strong>Cotización</strong>Precio aprox.</div>
+              <div><strong>Variable</strong>Tiempo estimado</div>
+            </div>
+            <button class="boton boton--relleno" onclick="irAFormularioServicio('Asesoría tecnológica para empresas')">Solicitar servicio</button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FORMULARIO DE SOLICITUD DE SERVICIO ====================== -->
+    <section class="seccion seccion--alterna" id="formulario">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Solicita un servicio técnico</h2>
+          <p>Completa el formulario y te contactaremos para confirmar la cita.</p>
+        </div>
+
+        <form class="tarjeta-formulario" id="formulario-servicio">
+          <div class="campo-formulario">
+            <label for="servicio-nombre">Nombre completo</label>
+            <input type="text" id="servicio-nombre" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-empresa">Empresa (opcional)</label>
+            <input type="text" id="servicio-empresa">
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-correo">Correo electrónico</label>
+            <input type="email" id="servicio-correo" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-telefono">Teléfono</label>
+            <input type="tel" id="servicio-telefono" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-tipo">Tipo de servicio</label>
+            <select id="servicio-tipo" required>
+              <option value="">Selecciona una opción</option>
+              <option>Mantenimiento preventivo</option>
+              <option>Limpieza de computador</option>
+              <option>Diagnóstico de equipos</option>
+              <option>Reparación</option>
+              <option>Formateo e instalación de sistema operativo</option>
+              <option>Instalación de programas</option>
+              <option>Cambio de componentes</option>
+              <option>Actualización de hardware</option>
+              <option>Asesoría tecnológica para empresas</option>
+            </select>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-descripcion">Descripción del problema</label>
+            <textarea id="servicio-descripcion" required></textarea>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="servicio-fecha">Fecha preferida</label>
+            <input type="date" id="servicio-fecha" required>
+          </div>
+
+          <button type="submit" class="boton boton--relleno boton--grande">Enviar solicitud</button>
+        </form>
+
+        <div class="mensaje-exito" id="mensaje-exito-servicio">
+          <h3>¡Solicitud registrada!</h3>
+          <p>Gracias por escribirnos. Nuestro equipo técnico te contactará pronto para confirmar la cita.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__columnas">
+        <div>
+          <a href="index.html" class="logo">Tech<span>Nova</span></a>
+          <p style="margin-top: 12px;">Tienda y servicio técnico de tecnología para personas y empresas.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios técnicos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>contacto@technova.com</li>
+            <li>+57 300 000 0000</li>
+            <li>Lun a sáb: 8:00 a.m. - 6:00 p.m.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pie-pagina__abajo">© 2026 TechNova. Proyecto académico con fines educativos.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Pequeña función propia de esta página: baja hasta el formulario
+    // y deja preseleccionado el tipo de servicio que el usuario eligió.
+    function irAFormularioServicio(nombreServicio) {
+      document.getElementById("servicio-tipo").value = nombreServicio;
+      document.getElementById("formulario").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

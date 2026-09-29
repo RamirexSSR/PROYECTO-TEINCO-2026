@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | TechNova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================== ENCABEZADO Y MENÚ ====================== -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+      <a href="index.html" class="logo">Tech<span>Nova</span></a>
+
+      <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="menu-navegacion" id="menu-navegacion">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios técnicos</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+        <li>
+          <a href="carrito.html" class="enlace-carrito">
+            Carrito <span id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====================== FORMULARIO DE CONTACTO GENERAL ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Contáctanos</h2>
+          <p>Escríbenos y te responderemos lo antes posible.</p>
+        </div>
+
+        <div class="grid-contacto">
+          <div>
+            <form class="tarjeta-formulario" id="formulario-contacto" style="margin: 0;">
+              <div class="campo-formulario">
+                <label for="contacto-nombre">Nombre</label>
+                <input type="text" id="contacto-nombre" required>
+              </div>
+
+              <div class="campo-formulario">
+                <label for="contacto-correo">Correo electrónico</label>
+                <input type="email" id="contacto-correo" required>
+              </div>
+
+              <div class="campo-formulario">
+                <label for="contacto-telefono">Teléfono</label>
+                <input type="tel" id="contacto-telefono" required>
+              </div>
+
+              <div class="campo-formulario">
+                <label for="contacto-motivo">Motivo de consulta</label>
+                <select id="contacto-motivo" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Información de productos</option>
+                  <option>Servicio técnico</option>
+                  <option>Reclamo o garantía</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+
+              <div class="campo-formulario">
+                <label for="contacto-mensaje">Mensaje</label>
+                <textarea id="contacto-mensaje" required></textarea>
+              </div>
+
+              <button type="submit" class="boton boton--relleno boton--grande">Enviar mensaje</button>
+            </form>
+
+            <div class="mensaje-exito" id="mensaje-exito-contacto">
+              <h3>¡Mensaje enviado!</h3>
+              <p>Gracias por escribirnos, te responderemos muy pronto.</p>
+            </div>
+          </div>
+
+          <div class="info-contacto">
+            <div class="info-contacto__item">
+              <h3>Correo</h3>
+              <p>contacto@technova.com</p>
+            </div>
+            <div class="info-contacto__item">
+              <h3>Teléfono</h3>
+              <p>+57 300 000 0000</p>
+            </div>
+            <div class="info-contacto__item">
+              <h3>Horario de atención</h3>
+              <p>Lunes a viernes: 8:00 a.m. – 6:00 p.m.<br>Sábados: 9:00 a.m. – 1:00 p.m.</p>
+            </div>
+            <div class="info-contacto__item">
+              <h3>Redes sociales</h3>
+              <p>Instagram: @technova.tech<br>Facebook: TechNova Tienda Tech</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FORMULARIO EMPRESARIAL ====================== -->
+    <section class="seccion seccion--alterna" id="empresas">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Cotización para empresas</h2>
+          <p>Cuéntanos qué necesita tu empresa y te enviaremos una cotización a la medida.</p>
+        </div>
+
+        <form class="tarjeta-formulario" id="formulario-empresas">
+          <div class="campo-formulario">
+            <label for="empresa-nombre">Nombre de contacto</label>
+            <input type="text" id="empresa-nombre" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="empresa-razon">Nombre de la empresa</label>
+            <input type="text" id="empresa-razon" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="empresa-correo">Correo electrónico</label>
+            <input type="email" id="empresa-correo" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="empresa-telefono">Teléfono</label>
+            <input type="tel" id="empresa-telefono" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="empresa-necesidad">¿Qué necesita tu empresa?</label>
+            <textarea id="empresa-necesidad" placeholder="Ej: 10 computadores de escritorio y mantenimiento trimestral" required></textarea>
+          </div>
+
+          <button type="submit" class="boton boton--relleno boton--grande">Solicitar cotización</button>
+        </form>
+
+        <div class="mensaje-exito" id="mensaje-exito-empresas">
+          <h3>¡Solicitud recibida!</h3>
+          <p>Un asesor de TechNova se pondrá en contacto con tu empresa muy pronto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__columnas">
+        <div>
+          <a href="index.html" class="logo">Tech<span>Nova</span></a>
+          <p style="margin-top: 12px;">Tienda y servicio técnico de tecnología para personas y empresas.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios técnicos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>contacto@technova.com</li>
+            <li>+57 300 000 0000</li>
+            <li>Lun a sáb: 8:00 a.m. - 6:00 p.m.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pie-pagina__abajo">© 2026 TechNova. Proyecto académico con fines educativos.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

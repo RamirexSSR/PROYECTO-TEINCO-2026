@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova | Tienda y servicio técnico de tecnología</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ====================== ENCABEZADO Y MENÚ ====================== -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+      <a href="index.html" class="logo">Tech<span>Nova</span></a>
+
+      <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="menu-navegacion" id="menu-navegacion">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="servicios.html">Servicios técnicos</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li>
+          <a href="carrito.html" class="enlace-carrito">
+            Carrito <span id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero fondo-circuito">
+      <div class="contenedor hero__contenido">
+        <div>
+          <p class="hero__etiqueta">Tienda y servicio técnico</p>
+          <h1>Tecnología que impulsa tus ideas</h1>
+          <p>
+            En TechNova encuentras computadores, componentes y periféricos de calidad,
+            además de un equipo técnico listo para mantener tus equipos funcionando
+            al máximo. Todo en un solo lugar, con precios claros en pesos colombianos.
+          </p>
+          <div class="hero__botones">
+            <a href="productos.html" class="boton boton--relleno boton--grande">Ver productos</a>
+            <a href="servicios.html" class="boton boton--borde boton--grande">Conocer servicios</a>
+          </div>
+        </div>
+
+        <div class="hero__ilustracion">
+          <!-- Ilustración simple tipo circuito, dibujada en SVG -->
+          <svg viewBox="0 0 400 320" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="40" y="40" width="320" height="240" rx="8" opacity="0.5"/>
+            <circle cx="120" cy="100" r="14"/>
+            <circle cx="280" cy="100" r="14"/>
+            <circle cx="120" cy="220" r="14"/>
+            <circle cx="280" cy="220" r="14"/>
+            <path d="M120 114 V206"/>
+            <path d="M280 114 V206"/>
+            <path d="M134 100 H266"/>
+            <path d="M134 220 H266"/>
+            <rect x="170" y="130" width="60" height="60" rx="4"/>
+            <path d="M170 150 H140"/>
+            <path d="M170 170 H140"/>
+            <path d="M230 150 H260"/>
+            <path d="M230 170 H260"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CATEGORÍAS ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Explora por categoría</h2>
+          <p>Encuentra justo lo que necesitas sin perder tiempo revisando todo el catálogo.</p>
+        </div>
+
+        <div class="rejilla-categorias">
+          <a href="productos.html?categoria=computadores" class="tarjeta-categoria">
+            <h3>Computadores</h3>
+            <p>Portátiles y equipos de escritorio</p>
+          </a>
+          <a href="productos.html?categoria=componentes" class="tarjeta-categoria">
+            <h3>Componentes</h3>
+            <p>Procesadores, tarjetas gráficas, RAM y más</p>
+          </a>
+          <a href="productos.html?categoria=perifericos" class="tarjeta-categoria">
+            <h3>Periféricos</h3>
+            <p>Teclados, mouse, audífonos y cámaras</p>
+          </a>
+          <a href="productos.html?categoria=monitores" class="tarjeta-categoria">
+            <h3>Monitores</h3>
+            <p>Pantallas para trabajo y entretenimiento</p>
+          </a>
+          <a href="servicios.html" class="tarjeta-categoria">
+            <h3>Servicio técnico</h3>
+            <p>Mantenimiento, reparación y asesoría</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PRODUCTOS DESTACADOS ====================== -->
+    <section class="seccion seccion--alterna">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Productos destacados</h2>
+          <p>Una selección de lo más pedido por nuestros clientes este mes.</p>
+        </div>
+
+        <!-- Este contenedor lo llena script.js con la función renderizarDestacados() -->
+        <div class="rejilla-productos" id="lista-destacados"></div>
+      </div>
+    </section>
+
+    <!-- ====================== BENEFICIOS ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>¿Por qué comprar en TechNova?</h2>
+        </div>
+
+        <div class="rejilla-categorias">
+          <div class="tarjeta-categoria">
+            <h3>Asesoría honesta</h3>
+            <p>Te recomendamos el equipo que realmente necesitas, no el más caro.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Servicio técnico propio</h3>
+            <p>Reparamos y mantenemos lo que vendemos, con garantía sobre la mano de obra.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Precios en pesos colombianos</h3>
+            <p>Sin sorpresas en el precio final ni conversiones confusas.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Atención a empresas</h3>
+            <p>Cotizaciones por volumen y mantenimiento programado para tu compañía.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SOLUCIONES PARA EMPRESAS ====================== -->
+    <section class="seccion seccion--alterna">
+      <div class="contenedor">
+        <div class="seccion-empresas">
+          <div>
+            <h2>Soluciones para empresas</h2>
+            <p>
+              Ayudamos a tu empresa a equiparse y mantenerse funcionando: desde la compra
+              de computadores y periféricos para todo el equipo de trabajo, hasta el
+              mantenimiento programado de tu infraestructura tecnológica.
+            </p>
+            <a href="contacto.html#empresas" class="boton boton--relleno">Solicitar cotización</a>
+          </div>
+
+          <ul class="lista-beneficios">
+            <li>Venta de computadores y equipamiento tecnológico por volumen</li>
+            <li>Mantenimiento preventivo y correctivo programado</li>
+            <li>Reparación y actualización de equipos de la empresa</li>
+            <li>Asesoría tecnológica para decisiones de compra</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== NOSOTROS ====================== -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Nosotros</h2>
+          <p>
+            TechNova nació como un proyecto para acercar la tecnología a las personas y
+            empresas de una forma sencilla y confiable, combinando venta de productos con
+            un servicio técnico real detrás de cada compra.
+          </p>
+        </div>
+
+        <div class="rejilla-categorias">
+          <div class="tarjeta-categoria">
+            <h3>Misión</h3>
+            <p>Facilitar el acceso a productos y servicios tecnológicos de calidad, con atención cercana y honesta.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Visión</h3>
+            <p>Ser una tienda tecnológica de referencia para hogares y empresas de la región.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Valores</h3>
+            <p>Honestidad, cercanía con el cliente y compromiso con un buen servicio técnico.</p>
+          </div>
+          <div class="tarjeta-categoria">
+            <h3>Compromiso</h3>
+            <p>Acompañamos al cliente antes, durante y después de la compra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== TESTIMONIOS ====================== -->
+    <section class="seccion seccion--alterna">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+
+        <div class="rejilla-testimonios">
+          <div class="tarjeta-testimonio">
+            <p class="cita">"Compramos cinco equipos para la oficina y el servicio técnico de mantenimiento nos ha ahorrado varios dolores de cabeza."</p>
+            <p class="autor">Laura Ramírez</p>
+            <p class="cargo">Gerente administrativa, Grupo Alsina</p>
+          </div>
+          <div class="tarjeta-testimonio">
+            <p class="cita">"El diagnóstico fue rápido y me explicaron todo antes de cobrar. Muy recomendados."</p>
+            <p class="autor">Camilo Rojas</p>
+            <p class="cargo">Cliente particular</p>
+          </div>
+          <div class="tarjeta-testimonio">
+            <p class="cita">"Buenos precios y asesoría clara para armar un equipo de diseño gráfico."</p>
+            <p class="autor">Estudio Marea</p>
+            <p class="cargo">Cliente empresarial</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== LLAMADO A LA ACCIÓN ====================== -->
+    <section class="llamado-accion fondo-circuito">
+      <div class="contenedor">
+        <h2>¿Listo para renovar o mantener tu tecnología?</h2>
+        <p>Explora el catálogo o cuéntanos qué necesitas y te ayudamos a decidir.</p>
+        <div class="hero__botones" style="justify-content: center;">
+          <a href="productos.html" class="boton boton--relleno boton--grande">Ver productos</a>
+          <a href="contacto.html" class="boton boton--borde boton--grande">Escríbenos</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__columnas">
+        <div>
+          <a href="index.html" class="logo">Tech<span>Nova</span></a>
+          <p style="margin-top: 12px;">Tienda y servicio técnico de tecnología para personas y empresas.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="servicios.html">Servicios técnicos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>contacto@technova.com</li>
+            <li>+57 300 000 0000</li>
+            <li>Lun a sáb: 8:00 a.m. - 6:00 p.m.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Síguenos</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pie-pagina__abajo">© 2026 TechNova. Proyecto académico con fines educativos.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
